@@ -1,9 +1,9 @@
 <script setup>
   import ResultadoForms from './components/ResultadoForms.vue';
   import InputForms from './components/InputForms.vue';
-  import { computed, ref } from 'vue';
-  import { reactive } from 'vue';
-const infos = reactive({
+  import { computed, ref, reactive } from 'vue';
+
+  const infos = reactive({
     nome: '',
     senha: '',
     confirmar: '',
@@ -16,24 +16,23 @@ const infos = reactive({
   });
 
 
+const mostrarBotao = computed(() =>{
+  return mostrarResultado.value ? 'Esconder' : 'Mostrar';
+});
 const mostrarResultado = ref(false);
-const mostrarBotao = computed(() =>
-  mostrarResultado.value ? 'Esconder' : 'Mostrar',
-);
+
 
 </script>
 
 <template>
-  <div>
-    <div v-if="!mostrarBotao">
-    <form>
-    <InputForms :infos-form="infos"/>
-   <button v-if="infos.senha ==infos.confirmar && infos.senha.length >= 3" @click="mostrarBotao = !mostrarBotao" type="submit">{{ mostrarResultado }}</button>
+  <div v-if="!mostrarResultado">
+    <form @submit.prevent="mostrarResultado = !mostrarResultado">
+      <InputForms :infos-form="infos"/>
+   <button v-if="infos.senha ==infos.confirmar && infos.senha.length >= 3" @click="mostrarResultado = !mostrarResultado" type="submit">{{ mostrarBotao }}</button>
     </form>
-    </div>
-  <div v-if="mostrarBotao">
-    <ResultadoForms :infos="infos" />
-    <button  @click="mostrarBotao = !mostrarBotao">{{ mostrarResultado }}</button>
   </div>
+  <div v-if="mostrarResultado">
+   <ResultadoForms :info="infos" />
+    <button  @click="mostrarResultado = !mostrarResultado">{{ mostrarBotao }}</button>
   </div>
 </template>

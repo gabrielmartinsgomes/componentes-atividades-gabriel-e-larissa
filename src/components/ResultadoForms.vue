@@ -1,24 +1,19 @@
 <script setup>
-defineProps(['infos']);
+defineProps(['info']);
 </script>
 
 <template>
 <div>
-  <form @submit.prevent="salvar">
-  <button @click="showContent=!showContent">{{buttonText}}</button>
-  <div v-if="showContent" class="expand-box">
     <h1>Informações:</h1>
-    <p>Nome:{{ infos.nome }}</p>
-    <p>email: {{ infos.email }}</p>
-    <p>Senha:{{ infos.senha }}</p>
-    <p>Nascimento: {{ infos.nascimento }}</p>
-    <p>Endereço:{{ infos.endereco }}</p>
-    <p>Cidade: {{ infos.cidade }}</p>
-    <p>Estado: {{ infos.estado }}</p>
-    <p>Hobbies{{ infos.hobbies.join(", ") }}</p>
-    <p>Biografia: {{ infos.bio }}</p>
-  </div>
-</form>
+    <p>Nome:{{ info.nome }}</p>
+    <p>Email: {{ info.email }}</p>
+    <p>Senha: {{ info.senha }}</p>
+    <p>Nascimento: {{ info.nascimento }}</p>
+    <p>Endereço: {{ info.endereco }}</p>
+    <p>Cidade: {{ info.cidade }}</p>
+    <p>Estado: {{ info.estado }}</p>
+    <p>Hobbies: {{ info.hobbies.join(", ") }}</p>
+    <p>Biografia: {{ info.bio }}</p>
   
 </div>
 </template>

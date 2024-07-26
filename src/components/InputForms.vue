@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+  defineProps({
     infosForm: {
         type: Object,
         required: true
@@ -37,7 +37,7 @@ const Estados = [
 ]
 </script>
 <template>
-  <h1>SUAS INFORMAÇÕES</h1>
+  <h1>Informe seus dados</h1>
                         <div class="label">
                             <label for="name">Nome</label>
                             <input type="text" v-model.trim="infosForm.nome" placeholder="Digite seu nome" id="name"
