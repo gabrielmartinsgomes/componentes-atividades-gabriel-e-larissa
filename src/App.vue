@@ -26,15 +26,13 @@ const mostrarResultado = ref(false);
 
 <template>
   <div v-if="!mostrarResultado">
-    <form @submit.prevent="mostrarResultado = !mostrarResultado" class="container">
+    <form @submit.prevent="mostrarResultado = !mostrarResultado">
       <InputForms :infos-form="infos"/>
    <button v-if="infos.senha ==infos.confirmar && infos.senha.length >= 3" @click="mostrarResultado = !mostrarResultado" type="submit">{{ mostrarBotao }}</button>
     </form>
-  </div>
-  <div v-if="mostrarResultado">
-    <form class="resultado">
+    </div>
+    <div v-if="mostrarResultado">
    <ResultadoForms :info="infos" />
     <button  @click="mostrarResultado = !mostrarResultado">{{ mostrarBotao }}</button>
-    </form>
   </div>
 </template>

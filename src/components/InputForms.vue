@@ -39,47 +39,50 @@ const Estados = [
 </script>
 <template>
 <div>
+    <div class="label">
                             <label for="name">Nome</label>
                             <input type="text" v-model.trim="infosForm.nome" placeholder="Digite seu nome" id="name"
                                 required />
-                        
-                        
+                        </div>
+                        <div class="label">
                             <label for="email">Email</label>
                             <input id="email" type="email" v-model.trim="infosForm.email"
                                 placeholder="Digite seu email" required>
-                        
-                        
+                        </div>
+                        <div class="label">
                             <label for="senha">Senha</label>
                             <input id="senha" type="password" v-model.trim="infosForm.senha"
                                 placeholder="Digite sua senha" required>
-                    
-                        
+                        </div>
+                        <div class="label">
                             <label for="confirmar">Confirmar senha</label>
                             <input id="confirmar" type="password" v-model.trim="infosForm.confirmar"
                                 placeholder="Confirme sua senha" required>
-                        
-                        
+                        </div>
+                        <div class="label">
                             <label for="endereco">Endereço</label>
                             <input id="endereco" type="password" v-model.trim="infosForm.endereco"
                                 placeholder="Rua XXX" required>
-                        
-                        
+                        </div>
+                        <div class="label">
                             <label for="nascimento">Nascimento</label>
                             <input id="nascimento" type="date" v-model="infosForm.nascimento"
                                 placeholder="Digite o dia que nasceu " required>
-                        
-                        
+                        </div>
+                        <div class="label">
                             <label for="cidade">Cidade</label>
                             <input id="cidade" type="text" v-model="infosForm.cidade" placeholder="Digite sua cidade"
                                 required>
-                        
-                        
+                        </div>
+                        <div class="label">
                             <label for="estado">Estado</label>
+
                             <select id="estado" value="Estado" v-model="infosForm.estado" required>
                                 <option v-for="Estado of Estados" :key="Estado.sigla" :value="Estado.sigla">
                                     {{ Estado.nome }}
                                 </option>
                             </select>
+                        </div>
                         
                             <div class="hobbies">
                             <p class="titulo">Hobbies:</p>
