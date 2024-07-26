@@ -38,7 +38,7 @@ const Estados = [
 
 </script>
 <template>
-<div class="informacoes">
+<div>
                         <div class="label">
                             <label for="name">Nome </label>
                             <input type="text" v-model.trim="infosForm.nome" placeholder="Digite seu nome" id="name"
@@ -122,6 +122,35 @@ const Estados = [
                             <label for="hobbies5">Outros</label>
                             </div>
                         </div>
+                        <div class="hobbies">
+                        <p>Linguagem preferida:</p>
+
+                        <div class="sla">
+                        <input type="radio" id="Js" value="JavaScript" v-model="infosForm.linguaProg">
+                        <label for="Js">JavaScript</label>
+                        </div>
+
+                        <div class="sla">
+                        <input type="radio" id="Java" value="Java" v-model="infosForm.linguaProg">
+                        <label for="Java">Java</label>
+                        </div>
+
+                        <div class="sla">
+                        <input type="radio" id="PHP" value="PHP" v-model="infosForm.linguaProg">
+                        <label for="PHP">PHP</label>
+                        </div>
+
+                        <div class="sla">
+                        <input type="radio" id="Py" value="Python" v-model="infosForm.linguaProg">
+                        <label for="Py">Python</label>
+                        </div>
+
+                        <div class="sla">
+                        <input type="radio" id="C#" value="C#" v-model="infosForm.linguaProg">
+                        <label for="C#">C#</label>
+                        </div>
+
+                    </div>
                         
                         <div class="bio">
                             <label for="bio">Biografia </label>

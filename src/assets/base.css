@@ -56,7 +56,7 @@
 }
 
 body {
-  min-height: 50vh;
+  min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
   line-height: 1.7vh;
@@ -86,7 +86,7 @@ form {
     rgb(49, 170, 65) 100%
   );
   border-image-slice: 3;
-  height: 100vh;
+  height: 1000px;
   width: 550px;
   margin: 10% 0 0 50%;
 }
@@ -109,14 +109,6 @@ div {
 }
 input {
   border-radius: 6px;
-}
-.resultado {
-  position: relative;
-  padding: 20px;
-  position: absolute;
-  top: 20%;
-  left: 40%;
-  margin: -70px 0 0 -170px;
 }
 p{
   padding: 10px;

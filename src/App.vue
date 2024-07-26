@@ -12,6 +12,7 @@
     cidade: '',
     endereco: '',
     hobbies: [],
+    linguaProg: [],
     bio: ''
   });
 

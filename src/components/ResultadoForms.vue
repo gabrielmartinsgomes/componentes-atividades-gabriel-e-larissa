@@ -14,6 +14,7 @@ defineProps(['info']);
     <p>Cidade: {{ info.cidade }}</p>
     <p>Estado: {{ info.estado }}</p>
     <p>Hobbies: {{ info.hobbies.join(", ") }}</p>
+    <p>Linguagem Preferida: {{ info.linguaProg }}</p>
     <p>Biografia: {{ info.bio }}</p>
   
 </div>
