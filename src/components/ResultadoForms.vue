@@ -6,7 +6,7 @@ defineProps(['info']);
 <template>
 <div>
     <h1>Informações:</h1>
-    <p>Nome:{{ info.nome }}</p>
+    <p>Nome: {{ info.nome }}</p>
     <p>Email: {{ info.email }}</p>
     <p>Senha: {{ info.senha }}</p>
     <p>Nascimento: {{ info.nascimento }}</p>

@@ -32,7 +32,7 @@ const mostrarResultado = ref(false);
     </form>
     </div>
     <div v-if="mostrarResultado">
-      <form>
+      <form id="resultado">
    <ResultadoForms :info="infos" />
     <button  @click="mostrarResultado = !mostrarResultado">{{ mostrarBotao }}</button>
   </form>
