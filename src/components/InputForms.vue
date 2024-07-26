@@ -39,7 +39,7 @@ const Estados = [
 </script>
 <template>
 <div>
-    <div class="label">
+                        <div class="label">
                             <label for="name">Nome</label>
                             <input type="text" v-model.trim="infosForm.nome" placeholder="Digite seu nome" id="name"
                                 required />

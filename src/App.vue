@@ -16,7 +16,7 @@
   });
 
 
-const mostrarBotao = computed(() =>{
+const mostrarBotao = computed(() => {
   return mostrarResultado.value ? 'Esconder' : 'Mostrar';
 });
 const mostrarResultado = ref(false);
@@ -32,7 +32,9 @@ const mostrarResultado = ref(false);
     </form>
     </div>
     <div v-if="mostrarResultado">
+      <form>
    <ResultadoForms :info="infos" />
     <button  @click="mostrarResultado = !mostrarResultado">{{ mostrarBotao }}</button>
-  </div>
+  </form>
+    </div>
 </template>
